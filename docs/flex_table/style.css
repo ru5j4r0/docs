@@ -1,0 +1,99 @@
+@media (max-width: 1200px) {
+  .aq-table thead {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+  .aq-table tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .aq-table tr {
+    margin: 0.5em 0.5em;
+    padding: 0.5em;
+    box-shadow: 0 0 0.5em black;
+  }
+
+  .aq-table td {
+    display: block;
+    margin: 0.5em 0.5em;
+    white-space: nowrap;
+  }
+
+  .aq-table td::before {
+    font-weight: bold;
+  }
+
+  #user-table td:nth-child(10) {
+    white-space: unset;
+  }
+
+  .aq-table td:nth-of-type(1)::before { content: "ID："; }
+	.aq-table td:nth-of-type(2)::before { content: "アカウント名："; }
+	.aq-table td:nth-of-type(3)::before { content: "氏名："; }
+	.aq-table td:nth-of-type(4)::before { content: "性別："; }
+	.aq-table td:nth-of-type(5)::before { content: "生年月日："; }
+	.aq-table td:nth-of-type(6)::before { content: "メールアドレス："; }
+	.aq-table td:nth-of-type(7)::before { content: "電話番号："; }
+	.aq-table td:nth-of-type(8)::before { content: "住所："; }
+	.aq-table td:nth-of-type(9)::before { content: "登録日："; }
+	.aq-table td:nth-of-type(10)::before { content: "メモ："; }
+}
+
+@media (min-width: 1200px) {
+  th {
+    background: #ddf;
+  }
+
+  td:first-child {
+    background: #eef;
+  }
+
+  .aq-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1em;
+  }
+  
+  .aq-table th {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    position: sticky;
+    top: 0;
+  }
+  
+  .aq-table td {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+  
+  .aq-table th,
+  .aq-table td {
+    padding: 1em;
+    white-space: nowrap;
+  }
+  
+  .aq-table th:first-child {
+    left: 0;
+    z-index: 1;
+  }
+  
+  .aq-table td:first-child {
+    position: sticky;
+    left: 0;
+  }
+  
+  .aq-table th:first-child,
+  .aq-table td:first-child {
+    border-left: 1px solid;
+  }
+  
+  #user-table td:nth-child(10) {
+    min-width: 10em;
+    white-space: unset;
+  }
+}
